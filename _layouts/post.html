@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<h5 class="font-italic font-weight-bold">Assista à videoaula: </h5>
+
+<div class="embed-responsive embed-responsive-16by9 my-5 align-center">
+    <iframe class="embed-responsive-item" src="{{ page.youtubelink }}" allowfullscreen></iframe>
+</div>
+
+<h5 class="font-italic font-weight-bold">Leia o texto: </h5>
+
+<div class="usual-text">
+    {{ content }}
+</div>
+<p class="text-sm text-left">Autor: {{ page.author }} </p>
+
+{% if site.data[page.questions] and site.data[page.options] %}
+<h5 class="font-italic font-weight-bold">Responda às questões: </h5>
+
+<div class="bg-light my-3" id="questions">
+    {% for questions in site.data[page.questions] %}
+    <h6 class="m-3 font-weight-bold">Questão {{ questions.id }} - {{ questions.question }}</h6>
+    {% for options in site.data[page.options] %}
+    {% if options.question_id == questions.id %}
+    {% if questions.type == "1" %}
+    <div>
+        <input type="radio" name="Q-{{ questions.id }}" id="{% increment i %}" value="{{ options.right }}">
+        <label for="Q-{{ questions.id }}" class="ml-3"> {{ options.option }}</label><br>
+    </div>
+    {% else %}
+    <div>
+        <input type="checkbox" name="Q-{{ questions.id }}" id="{% increment i %}"
+            value="{{ options.right }},{{ questions.type }}" itemtype="{{ questions.type }}"
+            onclick="checkLimit(this, '{{ questions.type }}' )">
+        <label for="Q-{{ questions.id }}" class="ml-3">{{ options.option }}</label><br>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    <button type="button" id="send-answer" class="btn btn-primary my-3 align-center"
+        onclick="checkAnswer('{{ site.data[page.questions].size }}')">Enviar Respostas</button>
+    <button type="button" style="display: none;" id="reset-answer" class="btn btn-success my-3 align-center"
+        onclick="resetAnswer('{{ site.data[page.questions].size }}')">Refazer Teste</button>
+    {% endif %}
+</div>

@@ -1,0 +1,36 @@
+email: "jose.tobias@outlook.com"
+author: "José Tobias"
+twitter_username: "none"
+github_username: "aprendereconomia"
+
+
+# Build settings
+plugins: [jekyll-paginate, jekyll-archives]
+markdown: kramdown
+paginate: 8
+sass:
+    sass_dir: _sass
+    style: compressed
+    
+# URL config
+permalink: pretty
+
+
+# plugins config
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+# defaults config
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
