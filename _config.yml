@@ -3,7 +3,6 @@ author: "José Tobias"
 twitter_username: "none"
 github_username: "aprendereconomia"
 
-
 # Build settings
 plugins: [jekyll-paginate, jekyll-archives]
 markdown: kramdown
@@ -14,9 +13,6 @@ sass:
     
 # URL config
 permalink: pretty
-
-url: https://tobiasjc.github.io
-baseurl: /testpageeconomia.github.io
 
 # plugins config
 jekyll-archives:
