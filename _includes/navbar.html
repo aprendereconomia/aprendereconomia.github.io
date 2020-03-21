@@ -1,5 +1,5 @@
 <a class="navbar-brand" href="/">
-    <img src="{{ site.url }}/assets/images/logo-ae.png" width="80" height="60" alt="thumbnail" class="img-thumbnail img-fluid">
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logo-ae.png" width="80" height="60" alt="thumbnail" class="img-thumbnail img-fluid">
     <span> </span>
 </a>
 <div class="main-title text-center">{{ page.title }}</div>
@@ -16,7 +16,7 @@
                 aria-haspopup="true" aria-expanded="false">Categorias</a>
             <div class="dropdown-menu">
                 {% for category in site.categories %}
-                <a class="dropdown-item text-center" href="{{site.url}}/category/{{category[0]|slugize}}">{{ category[0] }}</a>
+                <a class="dropdown-item text-center" href="{{ site.url }}{{ site.baseurl }}/category/{{category[0]|slugize}}">{{ category[0] }}</a>
                 {% endfor %}
             </div>
         </li>

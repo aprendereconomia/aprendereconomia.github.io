@@ -5,15 +5,15 @@ title: Aprender Economia
 {{ site.url }}
 {{ site.baseurl }}
 {% for post in paginator.posts %}
-<div class="text-center bg-light-blue"><a class="main-title font-black" href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
+<div class="text-center bg-light-blue"><a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
 <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}} por {{ post. author }}</p></div>
 <div class="usual-text link-box">
-   <a href="{{ site.url }}/{{ post.url }}">{{ post.excerpt }}</a>
+   <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
 </div>
 <p class="mb-2">
     <span class="font-light-grey">Categories:</span> 
     {% for category in post.categories %}
-    <span><a href="{{site.url}}/category/{{category|slugize}}">{{ category }}</a> </span>
+    <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category|slugize}}">{{ category }}</a> </span>
     {% endfor %}
 </p><br>
 {% endfor %}
