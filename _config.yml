@@ -3,6 +3,9 @@ author: "José Tobias"
 twitter_username: "none"
 github_username: "aprendereconomia"
 
+
+url: https://tobiasjc.github.io/testpageeconomia.github.io/
+
 # Build settings
 plugins: [jekyll-paginate, jekyll-archives]
 markdown: kramdown
