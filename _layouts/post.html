@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <h5 class="font-italic font-weight-bold">Assista à videoaula: </h5>
 
 <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
@@ -43,6 +44,6 @@ layout: default
     <button type="button" style="display: none;" id="reset-answer" class="btn btn-success my-3 align-center"
         onclick="resetAnswer('{{ site.data[page.questions].size }}')">Refazer Teste</button>
     <script async src="{{ site.url }}{{ site.baseurl }}/assets/js/questions_load.js" crossorigin="anonymous"></script>
-
+    <div id="results" style="display: none;"></div>
     {% endif %}
 </div>
