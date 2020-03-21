@@ -13,7 +13,7 @@ sass:
     
 # URL config
 permalink: pretty
-url: https://tobiasjc.github.io/testpageeconomia.github.io/
+# url: https://tobiasjc.github.io/testpageeconomia.github.io/
 
 # plugins config
 jekyll-archives:
