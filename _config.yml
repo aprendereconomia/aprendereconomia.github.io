@@ -15,6 +15,7 @@ sass:
 # URL config
 permalink: pretty
 
+host: https://tobiasjc.github.io/testpageeconomia.github.io/
 
 # plugins config
 jekyll-archives:
