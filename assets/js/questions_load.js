@@ -34,8 +34,8 @@ function resetAnswer(size) {
 }
 
 function manageCheckbox(comp) {
-   var accepted = 0;
    var right = 0;
+   var accepted = 0;
    var [is_right, accepted] = comp[0].value.split(",").map(x => parseInt(x));
    total_answers += accepted;
    for (var j = 0; j < comp.length; j++) {
