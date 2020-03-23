@@ -21,23 +21,24 @@ layout: default
 <h5 class="font-italic font-weight-bold">Responda às questões: </h5>
 
 <div class="bg-light my-3" id="questions">
+    {% assign k = 0 %}
     {% for questions in site.data[page.questions] %}
     <h6 class="m-3 font-weight-bold">Questão {{ questions.id }} - {{ questions.question }}</h6>
     {% for options in site.data[page.options] %}
     {% if options.question_id == questions.id %}
     {% if questions.type == "1" %}
     <div>
-        <input type="radio" name="Q-{{ questions.id }}" id="{% increment i %}" value="{{ options.right }}">
-        <label for="Q-{{ questions.id }}" class="ml-3"> {{ options.option }}</label><br>
+        <input type="radio" name="Q-{{ questions.id }}" id="{{ k }}" value="{{ options.right }}">
+        <label for="{{ k }}" class="ml-3"> {{ options.option }}</label><br>
     </div>
     {% else %}
     <div>
-        <input type="checkbox" name="Q-{{ questions.id }}" id="{% increment i %}"
-            value="{{ options.right }},{{ questions.type }}" itemtype="{{ questions.type }}"
-            onclick="checkLimit(this, '{{ questions.type }}' )">
-        <label for="Q-{{ questions.id }}" class="ml-3">{{ options.option }}</label><br>
+        <input type="checkbox" name="Q-{{ questions.id }}" id="{{ k }}" value="{{ options.right }},{{ questions.type }}"
+            itemtype="{{ questions.type }}" onclick="checkLimit(this, '{{ questions.type }}' )">
+        <label for="{{ k }}" class="ml-3">{{ options.option }}</label><br>
     </div>
     {% endif %}
+    {% assign k = k | plus: 1 %}
     {% endif %}
     {% endfor %}
     {% endfor %}
