@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/logo-ae.png" type="image/x-icon">
@@ -15,23 +15,21 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
+        <div class="container d-flex justify-content-between">
             {% include navbar.html %}
         </div>
     </nav>
-    <div class="container">
-        <main class="m-sm-auto p-auto" role=main>
-            {{ content }}
-        </main>
-    </div>
+    <main class="m-sm-auto p-auto container text-align-center" role=main>
+        {{ content }}
+    </main>
+    <!--     
     <footer class="center" id="contact">
         {% include footer.html %}
-    </footer>
+    </footer> -->
 
-    <script async src="https://cse.google.com/cse.js?cx=012711868375564954594:pa5job3kwit"></script>
-
-    
+    <script src="https://cse.google.com/cse.js?cx=012711868375564954594:pa5job3kwit"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
         </script>
