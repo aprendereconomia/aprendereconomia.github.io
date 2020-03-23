@@ -8,8 +8,8 @@ plugins: [jekyll-paginate, jekyll-archives]
 markdown: kramdown
 paginate: 8
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
     
 # URL config
 permalink: pretty

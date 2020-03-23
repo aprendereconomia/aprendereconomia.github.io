@@ -2,11 +2,13 @@
 layout: default
 ---
 
+{% if page.youtubelink %}
 <h5 class="font-italic font-weight-bold">Assista à videoaula: </h5>
 
 <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
     <iframe class="embed-responsive-item" src="{{ page.youtubelink }}" allowfullscreen></iframe>
 </div>
+{% endif %}
 
 <h5 class="font-italic font-weight-bold">Leia o texto: </h5>
 
