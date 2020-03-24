@@ -4,12 +4,24 @@ twitter_username: "none"
 github_username: "aprendereconomia"
 
 # Build settings
-plugins: [jekyll-paginate, jekyll-archives]
+plugins: [jekyll-paginate-v2, jekyll-archives]
 markdown: kramdown
-paginate: 8
+
 sass:
   sass_dir: _sass
   style: compressed
+
+pagination:
+  enabled: true 
+  debug: false  
+  collection: 'posts'
+  per_page: 3
+  permalink: '/page/:num/'
+  sort_field: 'date'
+  
+  extension: html
+  indexpage: 'index'
+
     
 # URL config
 permalink: pretty
