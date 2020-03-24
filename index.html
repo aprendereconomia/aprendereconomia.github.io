@@ -3,21 +3,37 @@ layout: page
 title: Aprender Economia
 ---
 
-{% for post in paginator.posts %}
-<div class="text-center bg-light-blue"><a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-<p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}} por {{ post. author }}</p></div>
-<div class="usual-text link-box">
-   <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
+{% for category in site.categories %}
+<div class="row">
+    <a class="btn col my-3 text-center btn-primary" data-toggle="collapse" href="#{{ category[0] }}" role="button"
+        aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] }}</a>
 </div>
-<p class="mb-2">
-    <span class="font-light-grey">Categories:</span> 
-    {% for category in post.categories %}
-    <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category|slugize}}">{{ category }}</a> </span>
-    {% endfor %}
-</p><br>
+{% for post in site.posts %}
+{% if post.categories contains category[0] %}
+<div class="collapse my-2" id="{{ category[0] }}">
+    <div class="card card-body">
+        <div class="text-center bg-light-blue"><a class="main-title font-black"
+                href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+            <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}} por {{ post. author }}</p>
+        </div>
+        <div class="usual-text link-box">
+            <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
+        </div>
+        <p class="mb-2">
+            <span class="font-light-grey">Categories:</span>
+            [{% for category in post.categories %}
+            <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category|slugize}}">{{ category }}</a> </span>
+            {% endfor %}]
+        </p>
+    </div>
+    <hr>
+</div>
+
+{% endif %}
+{% endfor %}
 {% endfor %}
 
-<!-- Pagination links -->
+<!-- Pagination links
 <div class="text-center my-5">
     {% if paginator.previous_page %}
     <a href="{{ site.url }}{{ site.baseurl }}/{{ paginator.previous_page_path }}" class="previous"> <span class="oi oi-arrow-circle-left"></span> </a>
@@ -28,4 +44,4 @@ title: Aprender Economia
     {% if paginator.next_page %}
     <a href="{{ site.url }}{{ site.baseurl }}/{{ paginator.next_page_path }}" class="next"> <span class="oi oi-arrow-circle-right"></span> </a>
     {% endif %}
-</div>
+</div> -->
