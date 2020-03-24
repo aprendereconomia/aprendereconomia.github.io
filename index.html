@@ -1,15 +1,13 @@
 ---
 layout: page
 pagination:
-    enabled: true
+enabled: true
 title: Aprender Economia
 ---
 
 {% for category in site.categories %}
-<div class="row">
-    <a class="btn col my-3 text-center btn-primary" data-toggle="collapse" href="#{{ category[0] }}" role="button"
-        aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] }}</a>
-</div>
+<a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] }}" role="button"
+    aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] }}</a>
 {% for post in site.posts %}
 {% if post.categories contains category[0] %}
 <div class="collapse my-2" id="{{ category[0] }}">
