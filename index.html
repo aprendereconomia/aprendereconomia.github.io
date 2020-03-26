@@ -5,12 +5,12 @@ enabled: true
 title: Aprender Economia
 ---
 
-{% for category in site.categories %}
-<a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] }}" role="button"
-    aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] }}</a>
+{% for category in site.data.categories %}
+<a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button"
+    aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] | capitalize }}</a>
 {% for post in site.posts %}
 {% if post.categories contains category[0] %}
-<div class="collapse my-2" id="{{ category[0] }}">
+<div class="collapse my-2" id="{{ category[0] | slugify }}">
     <div class="card card-body">
         <div class="text-center bg-light-blue"><a class="main-title font-black"
                 href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
@@ -22,16 +22,19 @@ title: Aprender Economia
         <p class="mb-2">
             <span class="font-light-grey">Categories:</span>
             [{% for category in post.categories %}
-            <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category|slugize}}">{{ category }}</a> </span>
+            <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category | slugify }}">{{ category | slugify }}</a> </span>
             {% endfor %}]
         </p>
     </div>
     <hr>
 </div>
-
 {% endif %}
 {% endfor %}
 {% endfor %}
+<!-- 
+{% for categories in site.data.categories %}
+    {{ categories }} <br>
+{% endfor %} -->
 
 <!-- Pagination links
 <div class="text-center my-5">

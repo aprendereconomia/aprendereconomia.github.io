@@ -20,7 +20,7 @@
                 aria-haspopup="true" aria-expanded="false">Categorias</a>
             <div class="dropdown-menu">
                 {% for category in site.categories %}
-                <a class="dropdown-item text-center" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | slugize }}">{{ category[0] }}</a>
+                <a class="dropdown-item text-center" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
                 {% endfor %}
             </div>
         </li>

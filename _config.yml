@@ -5,7 +5,6 @@ github_username: "aprendereconomia"
 
 # Build settings
 plugins: [jekyll-paginate]
-# plugins: [jekyll-paginate, jekyll-archives]
 markdown: kramdown
 
 sass:
@@ -17,18 +16,6 @@ paginate: 2
     
 # URL config
 permalink: pretty
-
-# plugins config
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
 
 # defaults config
 defaults:

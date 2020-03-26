@@ -5,7 +5,7 @@ youtubelink: https://www.youtube.com/embed/7YJMgbYbKO8
 questions: questions_test
 options: options_test
 author: Projeto Aprender Economia
-categories: [crypto, bolsa]
+categories: [assunto 3, assunto 1]
 ---
 
 Olá professor, bem vindo à plataforma de aprendizado **Aprender Economia**. Esta página deve te ensinar a utilizar as estruturas internas do site para fazer upload de posts e arquivos necessários para ensinar dados em funcionalidade, bem como mostrar essas funcionalidades que te ajudam a manejar e a ensinar na plataforma. É tudo muito simples e podem ser feitos com poucos clicks dentro do repositório do GitHub.
