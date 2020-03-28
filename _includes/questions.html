@@ -1,0 +1,29 @@
+{% assign slug_title = page.title | slugify %}
+<div class="bg-light my-3" id="questions">
+    {% assign k = 0 %}
+    {% for questions in site.data[page.questions] %}
+    <h6 class="m-3 font-weight-bold">Questão {{ questions.id }} - {{ questions.question }}</h6>
+    {% for options in site.data[page.options] %}
+    {% if options.question_id == questions.id %}
+    {% if questions.type == "1" %}
+    <div>
+        <input type="radio" name="Q-{{ questions.id }}-{{ slug_title }}" id="{{ k }}-{{ slug_title }}" value="{{ options.right }}">
+        <label for="{{ k }}-{{ slug_title }}" class="ml-3"> {{ options.option }}</label><br>
+    </div>
+    {% else %}
+    <div>
+        <input type="checkbox" name="Q-{{ questions.id }}-{{ slug_title }}" id="{{ k }}-{{ slug_title }}" value="{{ options.right }},{{ questions.type }}"
+            itemtype="{{ questions.type }}" onclick="checkLimit(this, '{{ questions.type }}' )">
+        <label for="{{ k }}-{{ slug_title }}" class="ml-3">{{ options.option }}</label><br>
+    </div>
+    {% endif %}
+    {% assign k = k | plus: 1 %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    <button type="button" id="send-answer-{{ slug_title }}" class="btn btn-primary my-3 align-center"
+        onclick="checkAnswer('{{ site.data[page.questions].size }}', '{{ slug_title }}')">Enviar Respostas</button>
+    <button type="button" style="display: none;" id="reset-answer-{{ slug_title }}" class="btn btn-success my-3 align-center"
+        onclick="resetAnswer('{{ site.data[page.questions].size }}', '{{ slug_title }}')">Refazer Teste</button>
+    <div id="results-{{ slug_title }}" style="display: none;"></div>
+</div>
