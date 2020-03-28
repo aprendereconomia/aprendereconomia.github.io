@@ -6,33 +6,37 @@ title: Aprender Economia
 ---
 
 <div class="container">
-<p>Selecione um assunto para visualizar suas postagens:</p>
-{% for category in site.data.categories %}
-<a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button"
-    aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] | capitalize }}</a>
-{% for post in site.posts %}
-{% if post.categories contains category[0] %}
-<div class="collapse my-2" id="{{ category[0] | slugify }}">
-    <div class="card card-body">
-        <div class="text-center bg-light-blue"><a class="main-title font-black"
-                href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-            <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}} por {{ post. author }}</p>
-        </div>
-        <div class="usual-text link-box">
-            <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
-        </div>
-        <p class="mb-2">
-            <span class="font-light-grey">Categories:</span>
-            [{% for category in post.categories %}
-            <span><a href="{{ site.url }}{{ site.baseurl }}/category/{{category | slugify }}">{{ category | slugify }}</a> </span>
-            {% endfor %}]
-        </p>
-    </div>
-    <hr>
-</div>
-{% endif %}
-{% endfor %}
-{% endfor %}
+    <p>Selecione um assunto para visualizar suas postagens:</p>
+    {% for category in site.data.categories %}
+        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button" aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] | capitalize }}</a>
+        {% for post in site.posts %}
+            {% if post.categories contains category[0] %}
+                <div class="collapse my-2" id="{{ category[0] | slugify }}">
+                    <div class="card card-body">
+                        <div class="text-center bg-light-blue">
+                            <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+                            <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}}
+                                por
+                                {{ post. author }}</p>
+                        </div>
+                        <div class="usual-text link-box">
+                            <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
+                        </div>
+                        <p class="mb-2">
+                            <span class="font-light-grey">Categories:</span>
+                            [
+                            {% for category in post.categories %}
+                                <span>
+                                    <a href="{{ site.url }}{{ site.baseurl }}/category/{{category | slugify }}">{{ category | slugify }}</a>
+                                </span>
+                            {% endfor %}]
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 </div>
 <!-- 
 {% for categories in site.data.categories %}
