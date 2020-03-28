@@ -1,0 +1,23 @@
+---
+layout: page
+title: exercícios
+---
+<div class="container">
+  <p>Selecione um assunto para resolver exercícios relacionados:</p>
+  {% for category in site.data.categories %}
+  {% assign cat_slug = category[0] | slugify %}
+  <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button"
+    aria-expanded="false" aria-controls="{{ cat_slug }}">{{ category[0] | capitalize }}</a>
+  {% assign cat_slug = category[0] | slugify %}
+  {% for post in site.posts %}
+  {% if post.categories contains category[0] %}
+  <div class="collapse my-2" id="{{ cat_slug }}">
+    <p>Exercícios do post: "<span>{{ post.title }}</span></p>
+    {% assign page = post %}
+    {% include questions.html %}
+    <hr>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
