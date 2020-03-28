@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/logo-ae.png" type="image/x-icon">
-    <title>{{ page.title  }}</title>
+    <title>{{ page.title | capitalize }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -21,9 +21,11 @@
             {% include navbar.html %}
         </div>
     </nav>
-    <main class="m-sm-auto p-auto container text-align-center" role=main>
+    <div class="m-sm-auto p-auto text-align-center" role=main>
+        <!-- <div class="container"> -->
         {{ content }}
-    </main>
+        <!-- </div> -->
+    </div>
 
     <footer class="footer text-center">
         <div class="container">
@@ -41,6 +43,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
         </script>
+    <script async src="{{ site.url }}{{ site.baseurl }}/assets/js/questions_manage.js" crossorigin="anonymous"></script>
+    <script async src="{{ site.url }}{{ site.baseurl }}/assets/js/functionalities.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

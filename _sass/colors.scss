@@ -1,17 +1,23 @@
-$colors: ("black": #000000, "grey": #333333, "light-grey": #6e7e85, "light": #eafdf8, "rubro": #88202f, "light-rubro": #f57979ce, "blue": #043565, "light-blue": #d0fcfccb);
+$colors: (
+  "black": #000000,
+  "grey": #333333,
+  "light-grey": #6e7e85,
+  "light": #eafdf8,
+  "rubro": #88202f,
+  "light-rubro": #f57979ce,
+  "blue": #043565,
+  "light-blue": #d0fcfccb
+);
+@each $name, $code in $colors {
+  .font-#{$name} {
+    color: $code;
+  }
 
-@each $name,
-$code in $colors {
-    .font-#{$name} {
-        color: $code;
-    }
+  .bg-#{$name} {
+    background-color: $code;
+  }
 
-    .bg-#{$name} {
-        background-color: $code;
-    }
-
-    .border-#{$name} {
-        border-color: $code;
-    }
+  .border-#{$name} {
+    border-color: $code;
+  }
 }
-

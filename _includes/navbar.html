@@ -1,8 +1,9 @@
 <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logo-ae.png" width="80" height="60" alt="thumbnail" class="img-thumbnail img-fluid">
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/logo-ae.png" width="80" height="60" alt="thumbnail"
+        class="img-thumbnail img-fluid">
     <span> </span>
 </a>
-<div class="main-title text-center">{{ page.title }}</div>
+<div class="main-title text-center">{{ page.title | capitalize }}</div>
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOptions"
     aria-controls="navbarOptions" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,8 +18,12 @@
         </li>
         <li class="nav-item dropdown mx-2">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Categorias</a>
+                aria-haspopup="true" aria-expanded="false">Sessões</a>
             <div class="dropdown-menu">
+                <h6 class="dropdown-header text-center bg-light">Material Suporte</h6>
+                <a href="{{ site.url }}{{ site.baseurl }}/videos" class="dropdown-item text-center">Videos</a>
+                <a href="{{ site.url }}{{ site.baseurl }}/exercises" class="dropdown-item text-center">Exercícios</a>
+                <h6 class="dropdown-header text-center bg-light">Postagens</h6>
                 {% for category in site.categories %}
                 <a class="dropdown-item text-center" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
                 {% endfor %}

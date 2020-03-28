@@ -1,10 +1,12 @@
 ---
 layout: page
 pagination:
-enabled: true
+    enabled: true
 title: Aprender Economia
 ---
 
+<div class="container">
+<p>Selecione um assunto para visualizar suas postagens:</p>
 {% for category in site.data.categories %}
 <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button"
     aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] | capitalize }}</a>
@@ -31,6 +33,7 @@ title: Aprender Economia
 {% endif %}
 {% endfor %}
 {% endfor %}
+</div>
 <!-- 
 {% for categories in site.data.categories %}
     {{ categories }} <br>
