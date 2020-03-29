@@ -1,7 +1,7 @@
 ---
 layout: page
 pagination:
-    enabled: true
+enabled: true
 title: Aprender Economia
 ---
 
@@ -9,9 +9,10 @@ title: Aprender Economia
     <p>Selecione um assunto para visualizar suas postagens:</p>
     {% for category in site.data.categories %}
         <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button" aria-expanded="false" aria-controls="{{ category[0] }}">{{ category[0] | capitalize }}</a>
-        {% for post in site.posts %}
-            {% if post.categories contains category[0] %}
-                <div class="collapse my-2" id="{{ category[0] | slugify }}">
+        <div class="collapse my-2" id="{{ category[0] | slugify }}">
+            {% for post in site.posts %}
+                {% if post.categories contains category[0] %}
+
                     <div class="card card-body">
                         <div class="text-center bg-light-blue">
                             <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
@@ -23,19 +24,20 @@ title: Aprender Economia
                             <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
                         </div>
                         <p class="mb-2">
-                            <span class="font-light-grey">Categories:</span>
+                            <span class="font-light-grey">Categorias:</span>
                             [
                             {% for category in post.categories %}
+                                {% assign cat_slug = category | slugify %}
                                 <span>
-                                    <a href="{{ site.url }}{{ site.baseurl }}/category/{{category | slugify }}">{{ category | slugify }}</a>
+                                    <a href="{{ site.url }}{{ site.baseurl }}/category/{{ cat_slug }}">{{ cat_slug }}</a>
                                 </span>
                             {% endfor %}]
                         </p>
                     </div>
                     <hr>
-                </div>
-            {% endif %}
-        {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
     {% endfor %}
 </div>
 <!-- 
