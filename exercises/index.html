@@ -10,8 +10,7 @@ title: exercícios
         <div class="collapse my-2" id="{{ cat_slug }}">
             {% for post in site.posts %}
                 {% if post.categories contains category[0] %}
-                    <p>Exercícios do post: "<a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-                    </p>
+                    <p>Exercícios do post: "<a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>"</p>
                     {% assign page = post %}
                     {% include questions.html %}
                 {% endif %}
