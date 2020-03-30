@@ -71,7 +71,7 @@ title: vídeos
     <p>Selecione um assunto para assistir vídeos relacionados:</p>
     {% for category in site.data.categories %}
         {% assign cat_slug = category[0] | slugify %}
-        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ category[0] | slugify }}" role="button" aria-expanded="false" aria-controls="{{ cat_slug }}">
+        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ cat_slug }}" role="button" aria-expanded="false" aria-controls="{{ cat_slug }}">
             {{ category[0] | capitalize }}
         </a>
 
@@ -84,12 +84,12 @@ title: vídeos
             <ul>
                 {% for post in site.posts %}
                     {% if post.categories contains category[0] %}
+                        {% assign post_slug = post.title | slugify %}
                         <li>
-                            <button class="btn btn-light" data-target="#modal-target-{{ post.title | slugify }}" data-toggle="modal" href="#" type="button">{{ post.title }}
+                            <button class="btn btn-light" data-target="#modal-target-{{ post_slug }}-{{ cat_slug }}" data-toggle="modal" href="#" type="button">{{ post.title }}
                             </button>
                         </li>
-
-                        <div aria-hidden="true" aria-labelledby="modal-{{ post.title | slugify }}" class="modal fade videoModal" id="modal-target-{{ post.title | slugify }}" role="dialog" tabindex="-1">
+                        <div aria-hidden="true" aria-labelledby="modal-{{ post_slug }}" class="modal fade videoModal" id="modal-target-{{ post_slug }}-{{ cat_slug }}" role="dialog" tabindex="-1">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header bg-light justify-content-center">
@@ -116,6 +116,5 @@ title: vídeos
                 {% endfor %}
             </ul>
         </div>
-
     {% endfor %}
 </div>
