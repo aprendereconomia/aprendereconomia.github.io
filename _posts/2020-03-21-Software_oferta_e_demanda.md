@@ -6,6 +6,7 @@ questions: questions
 options: options
 author: Projeto Aprender Economia
 excerpt_separator: <!--more-->
+subject: Ferramentas
 categories: [assunto 1]
 ---
 <!--more-->

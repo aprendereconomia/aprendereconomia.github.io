@@ -19,17 +19,15 @@
         <li class="nav-item dropdown mx-2">
             <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">Sessões</a>
             <div class="dropdown-menu">
-                <h6 class="dropdown-header text-center bg-light">Material Suporte</h6>
+                <!-- <h6 class="dropdown-header text-center bg-light">Classes</h6> -->
+                <a href="{{ site.url }}{{ site.baseurl }}/" class="dropdown-item text-center">Postagens</a>
                 <a href="{{ site.url }}{{ site.baseurl }}/videos" class="dropdown-item text-center">Videos</a>
                 <a href="{{ site.url }}{{ site.baseurl }}/exercises" class="dropdown-item text-center">Exercícios</a>
-                <h6 class="dropdown-header text-center bg-light">Categorias</h6>
-                {% for category in site.categories %}
-                    <a class="dropdown-item text-center" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
-                {% endfor %}
             </div>
         </li>
         <li class="nav-item mx-2">
-            <a class="nav-link" href="https://www.youtube.com/channel/UC4zRbcanlK4habf42NriZ6g" target="_blank">YouTube<span class="oi oi-external-link"></span>
+            <a class="nav-link" href="https://www.youtube.com/channel/UC4zRbcanlK4habf42NriZ6g" target="_blank">YouTube
+                <span class="oi oi-external-link"></span>
             </a>
         </li>
     </ul>

@@ -4,86 +4,23 @@ title: vídeos
 ---
 
 <div class="container">
-    <!-- <p>Selecione um assunto para assistir vídeos relacionados:</p>
-
-    {% for category in site.data.categories %}
-    {% assign cat_slug = category[0] | slugify %}
-    <button class="btn col my-3 btn-primary" type="button" data-toggle="collapse" data-target="#{{ cat_slug }}"
-        aria-expanded="false" aria-controls="{{ cat_slug }}">
-        {{ category[0] | capitalize }}
-    </button>
-
-    {% assign row_size = 0 %}
-    <div class="collapse" id="{{ cat_slug }}">
-        <div class="container">
-            {% for post in site.posts %}
-            {% assign pos = row_size | modulo: 3 %}
-            {% if pos == 0 %}
-            <div class="row">
-                {% endif %}
-                {% if post.categories contains category[0] %}
-                <div class="col-4">
-                        <div class="m-3">
-                            <img class="align-center img-fluid" data-target="#modal-target" data-toggle="modal"
-                                src="https://img.youtube.com/vi/{{ post.youtubelink | slice: 30,40 }}/hqdefault.jpg"
-                                alt="thumbnail for video on page {{ page.title }}">
-                            <p class="text-left text-mutted"><strong><small>{{ post.title }}</small></strong></p>
-                        </div>
-                </div>
-
-                <div class="modal fade" id="modal-target" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% assign row_size = row_size | plus: 1 %}
-                {% endif %}
-                {% assign pos = row_size | modulo: 3 %}
-                {% if pos == 0 %}
-            </div>
-            {%endif%}
-            {% endfor %}
-            {% assign pos = row_size | modulo: 3 %}
-            {% if pos == 0 %}
-        </div>
-        {% endif %}
-    </div>
-</div>
-</div>
-{% endfor %} -->
-
-
     <p>Selecione um assunto para assistir vídeos relacionados:</p>
-    {% for category in site.data.categories %}
-        {% assign cat_slug = category[0] | slugify %}
-        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ cat_slug }}" role="button" aria-expanded="false" aria-controls="{{ cat_slug }}">
-            {{ category[0] | capitalize }}
+    {% for subject in site.data.subjects %}
+        {% assign subject_slug = subject | slugify %}
+        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ subject_slug }}" role="button" aria-expanded="false" aria-controls="{{ subject_slug }}">
+            {{ subject | capitalize }}
         </a>
 
-        <div class="collapse" id="{{ cat_slug }}">
+        <div class="collapse" id="{{ subject_slug }}">
             <p>Clique no nome do vídeo abaixo para assistir:</p>
         </div>
 
 
-        <div class="collapse" id="{{ cat_slug }}">
+        <div class="collapse" id="{{ subject_slug }}">
             <ul>
                 {% for post in site.posts %}
-                    {% if post.categories contains category[0] %}
+                    {% assign post_subject_slug = post.subject | slugify %}
+                    {% if subject_slug == post_subject_slug %}
                         {% assign post_slug = post.title | slugify %}
                         <li>
                             <button class="btn btn-light" data-target="#modal-target-{{ post_slug }}-{{ cat_slug }}" data-toggle="modal" href="#" type="button">{{ post.title }}

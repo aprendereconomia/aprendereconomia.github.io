@@ -1,11 +1,12 @@
 ---
-title: Governo e Política Pública
+title: Economia a Dois Fatores
 layout: post
 youtubelink: https://www.youtube.com/embed/QXYmrW_I9UQ
 questions: questions_test
 options: options_test
 author: Projeto Aprender Economia
-categories: [assunto 1]
+subject: Oferta, Demanda e Equilíbrio de Mercado
+categories: [macroeconomia, produção, produção, despesa]
 ---
 
 Olá professor, bem vindo à plataforma de aprendizado **Aprender Economia**. Esta página deve te ensinar a utilizar as estruturas internas do site para fazer upload de posts e arquivos necessários para ensinar dados em funcionalidade, bem como mostrar essas funcionalidades que te ajudam a manejar e a ensinar na plataforma. É tudo muito simples e podem ser feitos com poucos clicks dentro do repositório do GitHub.

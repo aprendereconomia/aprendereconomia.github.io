@@ -4,16 +4,12 @@ twitter_username: "none"
 github_username: "aprendereconomia"
 
 # Build settings
-plugins: [jekyll-paginate]
 markdown: kramdown
 
 sass:
   sass_dir: _sass
   style: compressed
 
-
-paginate: 2
-    
 # URL config
 permalink: pretty
 

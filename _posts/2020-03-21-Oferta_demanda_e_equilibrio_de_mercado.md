@@ -5,6 +5,7 @@ youtubelink: https://www.youtube.com/embed/PSiJm0NDozw
 questions: questions_test
 options: options_test
 author: Projeto Aprender Economia
+subject: Demanda, Oferta e Equilíbrio de Mercado
 categories: [assunto 4]
 ---
 
