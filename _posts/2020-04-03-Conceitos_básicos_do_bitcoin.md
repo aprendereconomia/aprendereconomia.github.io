@@ -5,6 +5,6 @@ youtubelink: https://www.youtube.com/embed/lv3Z4IrLP90
 questions: questions_test
 options: options_test
 author: José Carlos Tobias da Silva
-subject: Criptomoeda
+subject: Criptomoedas
 categories: [moeda, mercado, serviços, microeconomia]
 ---
