@@ -1,0 +1,44 @@
+question_id,option,right
+1,"Moeda Digital",0
+1,"Moeda Virtual",0
+1,"Criptomoeda",1
+
+2,"Rede de usuários",0
+2,"Tecnologia que descreve como fazer transações de maneira segura",0
+2,"Um conjunto de protocolos",1
+2,"Um estrutura de registro único e distribuído",1
+2,"Valores que passam por uma cadeia de blocos",0
+2,"",0
+
+3,"Tempo de processamento de bloco",0
+3,"Bloco de transações adicionado ao blockchain",1
+3,"Dificuldade de processamento de bloco de transações",0
+3,"Quantidade de dinheiro movido dentro de um bloco de transações",0
+3,"Tempo conectado à rede Bitcoin",0
+3,"Taxas pagas pelos usuários com transações dentro de um bloco confirmado",1
+
+4,"Possuem empresas que fazem seu manejamento",0
+4,"Guardam valores para transações e possuem endereço único que as identifica",1
+4,"Transações são realizadas com valores dentro de suas estruturas",0
+4,"Podemos revelar valores de transações por verificações",0
+
+5,"Transação comum",1
+5,"Transação complexa",0
+5,"Transação agregada",1
+5,"Transação organizada",0
+5,"Transação distribuída",1
+5,"Transação moderada",0
+
+6,"Separados mais especificamente, se subdividindo em outras transações sub-básicas",0
+6,"Combinados, por exemplos, é difícil existirem transações de modelo agregado ou distribuído que não possuam troco como no modelo de transação comum",1
+6,"Combinados, por exemplo, transações comuns dificilmente possuem apenas um recebimento",0
+6,"Combinados com transações complexas, formando modelos abstratos",0
+6,"Esquecidos, e transações de modelo abstrato são utilizadas",0
+
+7,"Verdadeiro",0
+7,"Falso",1
+
+8,"Conhecimento da rede",0
+8,"Blockchain",1
+8,"Tipo de transação efetuada",0
+8,"Usuário que permite o rastreamento",0
