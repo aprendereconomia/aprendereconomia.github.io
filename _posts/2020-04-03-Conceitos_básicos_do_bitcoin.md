@@ -9,7 +9,7 @@ subject: Criptomoedas
 categories: [moeda, mercado, serviços, microeconomia]
 ---
 
-Muitas vezes, os vídeos encontrados sobre as criptomoedas não têm como objetivo o público estudante economia - explicando conceitos de maneira técnicas que são entendíveis apenas por aqueles que fazem parte de um nicho da computação. Portanto essa aula tem o objetivo de iniciar uma pessoa, que não tem conhecimentos técnicos de computação, a entender o que torna as criptomoedas tão utilizadas no mundo atual. Explicar conceitos de maneiras simples e demonstrar a utilização da moeda num cenário simplificado mas com entendimento das operações é o principal objetivo.
+Muitas vezes, os materiais encontrados sobre as criptomoedas não têm como objetivo o público estudante economia - explicando conceitos de maneira técnicas que são entendíveis apenas por aqueles que fazem parte de um nicho da computação. Portanto essa aula tem o objetivo de iniciar uma pessoa, que não tem conhecimentos técnicos de computação, a entender o que torna as criptomoedas tão utilizadas no mundo atual. Explicar conceitos de maneiras simples e demonstrar a utilização da moeda num cenário simplificado mas com entendimento das operações é o principal objetivo.
 
 Nessa aula, conceitos principais como: descentralização, *blockchain*, mineradores, transações e carteiras deverão ficar com seus pontos iniciais. Esses termos são muito utilizados quando se está falando de criptomoedas (como o Bitcoin) mas raramente são desmistificados de maneira simples. Deve-se ficar claro que diversas tecnicidades foram abstraídas ou não explicitadas durante a explicação para que não se perca o foco da aula - que não é direcionada para desenvolvedores.
 
