@@ -5,25 +5,28 @@ layout: default
 <div class="container">
 
     {% if page.youtubelink %}
-        <h5 class="font-italic font-weight-bold">Assista à videoaula:
-        </h5>
+        <h3 class="font-italic font-weight-bold">Assista à videoaula:
+        </h3>
 
         <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
             <iframe class="embed-responsive-item" src="{{ page.youtubelink }}" allowfullscreen></iframe>
         </div>
     {% endif %}
 
-    <h5 class="font-italic font-weight-bold">Leia o texto:
-    </h5>
+    <h3 class="font-italic font-weight-bold">Leia o texto:
+    </h3>
 
     <div class="usual-text">
         {{ content }}
     </div>
+
+    <br><br>
     <p class="text-sm text-left">Autor:
         {{ page.author }}
     </p>
 
-    {% if site.data[page.questions] and site.data[page.options] %}
+    <br><br>
+    {% if site.data.questions[page.questions] and site.data.options[page.options] %}
         <h5 class="font-italic font-weight-bold">Responda às questões:
         </h5>
         {% include questions.html %}

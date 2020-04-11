@@ -7,7 +7,7 @@ title: Aprender Economia
 
 <div class="container">
     <p>Selecione um assunto para visualizar suas postagens:</p>
-    {% for subject in site.data.subjects %}
+    {% for subject in site.data.struct.subjects %}
         {% assign subject_slug = subject | slugify %}
         <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ subject_slug }}" role="button" aria-expanded="false" aria-controls="{{ subject_slug }}">{{ subject | capitalize }}</a>
         <div class="collapse my-2" id="{{ subject_slug }}">
@@ -47,7 +47,6 @@ title: Aprender Economia
             {% endfor %}
         </div>
     {% endfor %}
-
     <!-- 
     {% for subject in site.data.subjects %}
         {% assign slug_subject = subject | slugify %}
