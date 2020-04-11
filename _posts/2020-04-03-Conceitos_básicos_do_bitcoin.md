@@ -2,20 +2,20 @@
 title: Conceitos Básicos do Bitcoin
 layout: post
 youtubelink: https://www.youtube.com/embed/lv3Z4IrLP90
-questions: questions_test
-options: options_test
+questions: conceitos-bitcoin
+options: conceitos-bitcoin
 author: José Carlos Tobias da Silva
 subject: Criptomoedas
 categories: [moeda, mercado, serviços, microeconomia]
 ---
 
-Muitas vezes, os materiais encontrados sobre as criptomoedas não têm como objetivo o público estudante economia - explicando conceitos de maneira técnicas que são entendíveis apenas por aqueles que fazem parte de um nicho da computação. Portanto essa aula tem o objetivo de iniciar uma pessoa, que não tem conhecimentos técnicos de computação, a entender o que torna as criptomoedas tão utilizadas no mundo atual. Explicar conceitos de maneiras simples e demonstrar a utilização da moeda num cenário simplificado mas com entendimento das operações é o principal objetivo.
+Muitas vezes, os materiais encontrados sobre as criptomoedas não têm como objetivo o público estudante economia - explicando conceitos de maneira técnicas que são entendíveis apenas por aqueles que fazem parte de um nicho da computação. Portanto essa aula tem o objetivo de iniciar uma pessoa, que não tem conhecimentos técnicos de computação, a entender o que torna as criptomoedas tão utilizadas no mundo atual. Explicar conceitos de maneiras simples e demonstrar a utilização da moeda num cenário simplificado mas com entendimento das operações é o principal objetivo desta postagem.
 
-Nessa aula, conceitos principais como: descentralização, *blockchain*, mineradores, transações e carteiras deverão ficar com seus pontos iniciais. Esses termos são muito utilizados quando se está falando de criptomoedas (como o Bitcoin) mas raramente são desmistificados de maneira simples. Deve-se ficar claro que diversas tecnicidades foram abstraídas ou não explicitadas durante a explicação para que não se perca o foco da aula - que não é direcionada para desenvolvedores.
+Nessa aula, conceitos principais como: descentralização, *blockchain*, mineradores, transações e carteiras deverão ficar com seus pontos iniciais. Esses termos são muito utilizados quando se está falando de criptomoedas (como o Bitcoin) mas raramente são explicados, ou desmistificados, de maneira simples. Deve-se ficar claro que diversas tecnicidades foram abstraídas ou não explicitadas durante a explicação para que não se perca o foco da aula - que não é direcionada para desenvolvedores.
 
 ### Introdução
 
-O Bitcoin é precursora do modelo atual empregado em criptomoedas. Todas as criptomoedas atualmente empregam um modelo igual ou extremamente parecido - adaptando pequenas modificações para seus fins. Pode-se dizer que o surgimento do Bitcoin se deu no dia 31 de outubro de 2008 quando foi divulgado o artigo entitulado *A Peer-to-Peer Electronic Cash System* que continha toda a explicação da implementação e modus-operandis da moeda que estava ainda a ser implementada na época. Esse artigo foi divulgado sob o pseudônimo de Satoshi Nakamoto - o qual ainda não se tem provas concretas de sua identidade. A primeira transação foi feita, e registrada pelos mecanismos da moeda, no dia primeira de março de 2009 - pelo próprio Satoshi Nakamoto.
+O Bitcoin é precursora do modelo atual empregado em criptomoedas. Todas as criptomoedas atualmente empregam um modelo igual ou extremamente parecido - adaptando pequenas modificações para seus fins. Pode-se dizer que o surgimento do Bitcoin se deu no dia 31 de outubro de 2008 quando foi divulgado o artigo intitulado *A Peer-to-Peer Electronic Cash System* que continha toda a explicação da implementação e modus-operandis da moeda que estava ainda a ser implementada na época. Esse artigo foi divulgado sob o pseudônimo de Satoshi Nakamoto - o qual ainda não se tem provas concretas de sua identidade. A primeira transação foi feita, e registrada pelos mecanismos da moeda, no dia primeira de março de 2009 - pelo próprio Satoshi Nakamoto.
 
 ### Desmistificando Termos
 
@@ -25,7 +25,7 @@ Nessa seção, os termos: descentralização, *blockchain* e mineradores serão 
 
 O funcionamento do Bitcoin se dá por uma rede P2P. As redes P2P são caracterizadas pelo seu funcionamento onde nós conectados a rede trocam mensagens contendo informações de um para o outro - isso quer dizer que as mensagens são passadas de um para um - até que seu objetivo seja alcançado. Esses objetivos podem ser desde fazer com que todos os nós da rede recebam determinada informação, ou fazer com que um nó qualquer envie uma mensagem para outro nó.
 
-Na rede Bitcoin, os nós são os usuários da rede e eles executam ações de acordo com protocolos empregados. Protocolos são definidos como "um conjunto de informações, decisões, normas e regras definidas a partir de um ato oficial para que ações sejam aceitas dentro de um determinado ambiente" - ou seja, o protocolo foi definido pelos criadores da rede Bitcoin e os usuários que desejam usufruir das funcionalidades da rede devem obedecer a estre protocolo para que suas ações sejam aceitas. Os protocolos são pré-definidos, porém não há um mecânismo central controlando outros aspectos da rede como um banco ou governo. Todos os usuários na rede colaboram com seu funcionamento recebendo e repassando mensagens pela rede, e a rede ajusta sua forma de trabalho através do seu próprio funcionamento. LEMBRETE: linkar ao final um exemplo desse ajuste de funcionamento para mineração de blocos e sua dificuldade.
+Na rede Bitcoin, os nós são os usuários da rede e eles executam ações de acordo com protocolos empregados. Protocolos são definidos como "um conjunto de informações, decisões, normas e regras definidas a partir de um ato oficial para que ações sejam aceitas dentro de um determinado ambiente" - ou seja, o protocolo foi definido pelos criadores da rede Bitcoin e os usuários que desejam usufruir das funcionalidades da rede devem obedecer a este protocolo para que suas ações sejam aceitas. Os protocolos são pré-definidos, porém não há um mecanismo central controlando outros aspectos da rede como um banco ou governo. Todos os usuários na rede colaboram com seu funcionamento recebendo e repassando mensagens pela rede, e a rede ajusta sua forma de trabalho através do seu próprio funcionamento.
 
 ### Blockchain (Blocos Encadeados)
 
@@ -37,13 +37,13 @@ A principal inovação do Bitcoin é o *blockchain* e isso deve ser reconhecido 
 
 ### Miners (Mineradores)
 
-Os mineradores são nós conectados a rede que têm um papel não de usuário comum, aquele que está alí para executar transações, mas com o papel de confirmar transações. Essa confirmação de uma transação, se dá quando ela é agrupada com outras transações formando um bloco e é adicionada ao *blockchain* - registro único e distribuído de todas as transações. Ao fazer a junção de transações em blocos, resolver um determinado problema de criptografia e adcionar o bloco ao *blockchain* os mineradores recebem uma quantidade de bitcoins pelo bloco e também as taxas de todas as transações no bloco - sendo assim, a atividade de mineração é rentável e os mineradores são remunerados fixamente por bloco confirmado bem como pelos usuário da rede com o pagamento de taxas opcionais. A rede se ajusta de maneira a permitir que um bloco seja adicionar ao *blockchain* a cada 10 minutos.  LEMBRETE: adicionar ao final um link explicando
+Os mineradores são nós conectados a rede que têm um papel não de usuário comum, aquele que está ali para executar transações, mas com o papel de confirmar transações. Essa confirmação de uma transação, se dá quando ela é agrupada com outras transações formando um bloco e é adicionada ao *blockchain* - registro único e distribuído de todas as transações. Ao fazer a junção de transações em blocos, resolver um determinado problema de criptografia e adicionar o bloco ao *blockchain* os mineradores recebem uma quantidade de bitcoins pelo bloco e também as taxas de todas as transações no bloco - sendo assim, a atividade de mineração é rentável e os mineradores são remunerados fixamente por bloco confirmado bem como pelos usuário da rede com o pagamento de taxas opcionais. A rede se ajusta de maneira a permitir que um bloco seja adicionar ao *blockchain* a cada 10 minutos.
 
 Os mineradores são essenciais para o funcionamento de uma rede de criptomoedas - como o Bitcoin. Sem eles, as transações não são confirmadas e a rede não terá funcionamento de acordo com o esperado. Como dito, qualquer usuário é um minerador em potencial, porém atualmente existem computadores especializados na atividade que se mostra rentável e suficiente para dar vasão ao grande número de transações realizadas.
 
 ### Transações
 
-As transações são atividades que envolvem a troca de valores entre dois nós da rede Bitcoin. Assim sendo, quando um usuário retira valor de seus fundos e os repassa para fundos de outro usuário, uma transação ocorre. Vamos verificar agora os principais mecânismos e ferramentas envolvidas nas transações
+As transações são atividades que envolvem a troca de valores entre dois nós da rede Bitcoin. Assim sendo, quando um usuário retira valor de seus fundos e os repassa para fundos de outro usuário, uma transação ocorre. Vamos verificar agora os principais mecanismos e ferramentas envolvidas nas transações
 
 #### Carteiras
 
@@ -65,14 +65,14 @@ Existem três tipos básicos de transações que empregam o modelo básico nas t
 
 - **Transação Comum**: 1 entrada e 2 saídas.
   - 1 envio de A para B, com um recebimento em B e um envio de troco de A para A
-  - ![transação1]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao1.png){: .img-fluid}
+  - !["diagrama de modelo de transação comum"]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao1.png){: .img-fluid}
 
 - **Transação Agregada**: Múltiplas entradas e 1 saída
   - 1 envio com somatório de várias entradas de A para B, com um recebimento em B
-  - ![transação1]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao2.png){: .img-fluid}
+  - !["diagrama de modelo de transação agregada"]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao2.png){: .img-fluid}
 
 - **Transação Distribuída**: 1 entrada e múltiplas saídas
   - 1 envio de A para B, com um recebimento em B e vários envios de B para outros
-  - ![transação1]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao3.png){: .img-fluid}
+  - !["diagrama de modelo de transação distribuída"]({{ site.url }}/{{ site.baseurl }}/assets/images/conceitos-do-bitcoin/transacao3.png){: .img-fluid}
 
 É importante lembrar que no mundo real, bem como em transações reais de bitcoins, esses tipo de transações podem ser combinados e geralmente são. Por exemplo, é difícil haver uma transação no modelo distribuído ou agregado que não possua troco.
