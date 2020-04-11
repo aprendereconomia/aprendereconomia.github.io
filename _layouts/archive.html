@@ -4,7 +4,7 @@ layout: default
 
 <div class="container">
     <h1>Postagens da categoria
-                '{{ page.type }}'</h1>
+                                '{{ page.type }}'</h1>
     <ul class="posts">
         {% assign type_slug = page.type | slugify %}
         {% for post in site.posts %}
@@ -12,7 +12,7 @@ layout: default
                 <li>
                     <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}
                         -
-                        <a class="post-link" href="{{ site.url }}{{ site.baseurl }}/{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                         por
                         {{ post.author }}
                     </span>
