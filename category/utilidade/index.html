@@ -1,0 +1,28 @@
+---
+layout: archive
+type: utilidade
+---
+
+<!-- <div class="container">
+    {% assign slug_cat_page = page.category | slugify %}
+    <h1>Postagens da categoria
+        {{ page.type }}
+        '{{ page.title }}'</h1>
+    <ul class="posts">
+        {% for post in site.posts %}
+            {% for category in post.categories %}
+                {% assign slug_cat_post = category | slugify %}
+                {% if slug_cat_post == slug_cat_page %}
+                    <li>
+                        <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}
+                            -
+                            <a class="post-link" href="{{ site.url }}{{ site.baseurl }}/{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            por
+                            {{ post.author }}
+                        </span>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div> -->
