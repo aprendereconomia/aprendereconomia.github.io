@@ -5,7 +5,7 @@ title: vídeos
 
 <div class="container">
     <p>Selecione um assunto para assistir vídeos relacionados:</p>
-    {% for subject in site.data.subjects %}
+    {% for subject in site.data.struct.subjects %}
         {% assign subject_slug = subject | slugify %}
         <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ subject_slug }}" role="button" aria-expanded="false" aria-controls="{{ subject_slug }}">
             {{ subject | capitalize }}
