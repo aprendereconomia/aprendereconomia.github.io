@@ -21,9 +21,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <!-- <div class="embed-responsive embed-responsive-16by9 align-center"> -->
-                            <embed src="{{ site.baseurl }}/{{ pres.src }}" frameborder="0" width="100%" style="height: 85vh;">
-                            <!-- </div> -->
+                            <object type="application/pdf" data="{{ site.baseurl }}/{{ pres.src }}" width="100%" height="500" style="height: 85vh;">
+                                <a class="btn btn-primary text-white" href="{{ site.baseurl}}/{{ pres.src }}">Baixar apresentação</a>
+                            </object>
+
+                            <!-- <embed src="{{ site.baseurl }}/{{ pres.src }}" frameborder="0" width="100%" style="height: 85vh;"> -->
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
