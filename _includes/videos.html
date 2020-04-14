@@ -4,24 +4,24 @@
 
 <div class="collapse" id="videos-dropdown">
     <ul class="list-group">
-        {% for post in site.data.struct.videos %}
-            {% assign post_slug = post.title | slugify %}
+        {% for video in site.data.struct.videos %}
+            {% assign video_slug = video.title | slugify %}
             <li class="list-group-item">
-                <button class="btn btn-light" data-target="#modal-video-{{ post_slug }}" data-toggle="modal" href="#" type="button">{{ post.title }}
+                <button class="btn btn-light" data-target="#modal-video-{{ video_slug }}" data-toggle="modal" href="#" type="button">{{ video.title }}
                 </button>
             </li>
-            <div aria-hidden="true" aria-labelledby="modal-{{ post_slug }}" class="modal fade videoModal" id="modal-video-{{ post_slug }}" role="dialog" tabindex="-1">
-                <div class="modal-dialog modal-lg" role="document">
+            <div aria-hidden="true" aria-labelledby="modal-{{ video_slug }}" class="modal fade videoModal" id="modal-video-{{ video_slug }}" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-lg modal-sm" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-light justify-content-center">
-                            <h5 class="modal-title" id="exampleModalLabel">{{ post.title | capitalize }}</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">{{ video.title }}</h5>
                             <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
-                                <iframe class="embed-responsive-item" allow="autoplay" allowscriptaccess="always" src="{{ post.youtubelink }}" allowscriptaccess="always" allowfullscreen></iframe>
+                                <iframe class="embed-responsive-item" allow="autoplay" src="{{ video.youtubelink }}" allowscriptaccess="always" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="modal-footer">
