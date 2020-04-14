@@ -6,76 +6,24 @@ title: Aprender Economia
 ---
 
 <div class="container">
-    <p>Selecione um assunto para visualizar suas postagens:</p>
-    {% for subject in site.data.struct.subjects %}
-        {% assign subject_slug = subject | slugify %}
-        <a class="btn col my-3 btn-primary" data-toggle="collapse" href="#{{ subject_slug }}" role="button" aria-expanded="false" aria-controls="{{ subject_slug }}">{{ subject | capitalize }}</a>
-        <div class="collapse my-2" id="{{ subject_slug }}">
-            {% for post in site.posts %}
-                {%assign post_subject_slug = post.subject | slugify %}
-                {% if post_subject_slug == subject_slug %}
-                    <div class="card card-body">
-                        <div class="text-center bg-light-blue">
-                            <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-                            <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}}
-                                por
-                                {{ post. author }}</p>
-                        </div>
-                        <div class="usual-text link-box">
-                            <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
-                        </div>
-                        <p class="mb-2">
-                            <span class="font-light-grey">Categorias:</span>
-                            [
-                            {% assign size = post.categories.size | minus: 1 %}
-                            {% for index in (0..size) %}
-                                {% assign cat_slug = post.categories[index] | slugify %}
-                                <span>
-                                    <a href="{{ site.url }}{{ site.baseurl }}/category/{{ cat_slug }}">{{ cat_slug }}</a>
-                                </span>
-                                {% assign next = index | plus: 1 %}
-                                {% if next < post.categories.size %}
-                                    <span>,
-                                    </span>
-                                {% endif %}
-                            {% endfor %}
-                            ]
-                        </p>
-                    </div>
-                    <hr>
-                {% endif %}
-            {% endfor %}
+    {% for post in site.posts %}
+        {%assign post_subject_slug = post.subject | slugify %}
+        <div class="card card-body" id="scroll">
+            <div class="text-center bg-light-blue">
+                <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+                <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}}
+                    por
+                    {{ post. author }}</p>
+            </div>
+            <div class="usual-text link-box">
+                <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
+            </div>
+            <p class="mb-2"></p>
         </div>
+        <hr>
     {% endfor %}
-    <!-- 
-    {% for subject in site.data.subjects %}
-        {% assign slug_subject = subject | slugify %}
-        {{ slug_subject }}
-        <br>
-        {% for post in site.posts %}
-            {% assign post_slug_subject = post.subject | slugify %}
-            {% if post_slug_subject == slug_subject %}
-                {{ post.title }}
-            {% endif %}
-        {% endfor %}
-        <br>
-    {% endfor %} -->
+    {% include videos.html %}
+    {% include presentations.html %}
+    {% include questions.html %}
+    {% include tools.html %}
 </div>
-<!-- 
-{% for categories in site.data.categories %}
-    {{ categories }} <br>
-{% endfor %} -->
-
-<!-- Pagination links
-<div class="text-center my-5">
-    {% if paginator.previous_page %}
-    <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li>
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-    </li>
-    {% endif %}
-</div> -->

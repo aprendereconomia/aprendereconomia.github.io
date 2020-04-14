@@ -1,0 +1,34 @@
+<a aria-controls="tools-dropdown" aria-expanded="false" class="btn col my-3 btn-primary" data-toggle="collapse" href="#tools-dropdown" role="button">
+    Ferramentas e Softwares
+</a>
+
+<div class="collapse" id="tools-dropdown">
+    <ul class="list-group">
+        {% for tool in site.data.struct.tools %}
+            {% assign tool_slug = tool.title | slugify %}
+            <li class="list-group-item">
+                <button class="btn btn-light" data-target="#modal-tool-{{ tool_slug }}" data-toggle="modal" href="#" type="button">{{ tool.title }}
+                </button>
+            </li>
+            <div aria-hidden="true" aria-labelledby="modal-{{ tool_slug }}" class="modal fade videoModal" id="modal-tool-{{ tool_slug }}" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light justify-content-center">
+                            <h5 class="modal-title" id="exampleModalLabel">{{ tool.title | capitalize }}</h5>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
+                                {{ tool.content }}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+    </ul>
+</div>

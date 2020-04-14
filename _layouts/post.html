@@ -13,9 +13,6 @@ layout: default
         </div>
     {% endif %}
 
-    <h3 class="font-italic font-weight-bold">Leia o texto:
-    </h3>
-
     <div class="usual-text">
         {{ content }}
     </div>
@@ -29,6 +26,6 @@ layout: default
     {% if site.data.questions[page.questions] and site.data.options[page.options] %}
         <h5 class="font-italic font-weight-bold">Responda às questões:
         </h5>
-        {% include questions.html %}
+        {% include question.html %}
     {% endif %}
 </div>
