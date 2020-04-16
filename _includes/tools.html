@@ -7,7 +7,7 @@
         {% for tool in site.data.struct.tools %}
             {% assign tool_slug = tool.title | slugify %}
             {% if tool.content %}
-                <li class="list-group-item">
+                <li class="list-group-item text-center">
                     <button class="btn btn-light" data-target="#modal-tool-{{ tool_slug }}" data-toggle="modal" href="#" type="button">{{ tool.title }}
                     </button>
                 </li>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             {% elsif tool.link %}
-                <li class="list-group-item">
+                <li class="list-group-item text-center">
                     <a class="btn btn-light " href="{{ tool.link }}" target="_blank">{{ tool.title }}
                         <span class="oi oi-external-link"></span>
                     </a>

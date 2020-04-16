@@ -6,7 +6,7 @@
     <ul class="list-group">
         {% for test in site.data.struct.tests %}
             {% assign test_slug = test.title | slugify %}
-            <li class="list-group-item">
+            <li class="list-group-item text-center">
                 <button class="btn btn-light" data-target="#modal-question-{{ test_slug }}" data-toggle="modal" href="#" type="button">{{ test.title }}
                 </button>
             </li>

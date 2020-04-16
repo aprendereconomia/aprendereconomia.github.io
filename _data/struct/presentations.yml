@@ -1,4 +1,31 @@
 - {
     title: "Conceitos Básicos do Bitcoin e Criptomoedas",
-    src: "pdf/bitcoin-criptomoedas.pdf",
+    src: "presentations/bitcoin-criptomoedas.pdf",
   }
+
+- {
+    title: "Introdução a Teoria Econômica",
+    src: "presentations/introducao-teoria-economica.pdf",
+  }
+
+- {
+    title: "Agregados Macroeconômicos",
+    src: "presentations/agregados-macroeconomicos.pdf",
+  }
+
+- {
+    title: "Crescimento e Desenvolvimento Econômico",
+    src: "presentations/crescimento-e-desenvolvimento-economico.pdf",
+  }
+
+- {
+    title: "Estruturas de Mercado",
+    src: "presentations/estruturas-de-mercado.pdf",
+  }
+
+- {
+    title: "Governo e Política Fiscal",
+    src: "presentations/governo-e-politica-fiscal.pdf",
+  }
+
+- { title: "Produção e Custos", src: "presentations/producao-e-custos.pdf" }
