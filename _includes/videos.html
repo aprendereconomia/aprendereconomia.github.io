@@ -4,15 +4,14 @@
 
 <div class="collapse" id="videos-dropdown">
     <nav class="justify-content-center align-center navbar navbar-light bg-light">
-        <form class="form-inline">
-            <div class="row">
-                <div class="col">
-                    <input aria-label="Search" class="form-control mr-sm-2" id="search-video" oninput="filter_list(this, 'videos')" placeholder="Filtrar" type="search">
-                        <span class="oi oi-magnifying-glass"></span>
-                    </input>
-                </div>
+        <div class="row">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-videos" oninput="filter_list(this, 'videos')" placeholder="Filtrar" type="text">
             </div>
-        </form>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <span class="oi oi-magnifying-glass"></span>
+            </div>
+        </div>
     </nav>
     <ul class="list-group" id="list-videos">
         {% for video in site.data.struct.videos %}
