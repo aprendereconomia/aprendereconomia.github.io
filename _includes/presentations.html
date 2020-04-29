@@ -4,6 +4,13 @@
 
 
 <div class="collapse" id="presentations-dropdown">
+    <nav class="justify-content-center align-center navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input aria-label="Search" class="text-center form-control mr-sm-2" id="search-video" oninput="filter_list(this)" placeholder="Filtrar" type="search">
+                <span class="oi oi-magnifying-glass"></span>
+            </input>
+        </form>
+    </nav>
     <ul class="list-group">
         {% for pres in site.data.struct.presentations %}
             {% assign pres_slug = pres.title | slugify %}
