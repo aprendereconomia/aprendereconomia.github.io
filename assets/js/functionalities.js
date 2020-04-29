@@ -5,12 +5,13 @@ $('.videoModal').on('hide.bs.modal', function (e) {
     $if.attr("src", src);
 });
 
-function filter_list(e) {
+function filter_list(e, list_id) {
     let element_text = $(e).val();
 
     let search_text = element_text.normalize("NFC").toLowerCase().trim();
     let search_pattern = new RegExp(search_text, 'i');
-    let list = $(e).parent().parent().next(".list-group").children(".list-group-item");
+
+    let list = $("#list-" + list_id).children(".list-group-item");
 
     list.each(function (idx, el) {
         let text = $(el).text().normalize("NFC").toLowerCase().trim();

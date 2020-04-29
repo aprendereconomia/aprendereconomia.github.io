@@ -8,14 +8,14 @@
         <form class="form-inline">
             <div class="row">
                 <div class="col">
-                    <input aria-label="Search" class="form-control mr-sm-2" id="search-video" oninput="filter_list(this)" placeholder="Filtrar" type="search">
+                    <input aria-label="Search" class="form-control mr-sm-2" id="search-video" oninput="filter_list(this, 'presentations')" placeholder="Filtrar" type="search">
                         <span class="oi oi-magnifying-glass"></span>
                     </input>
                 </div>
             </div>
         </form>
     </nav>
-    <ul class="list-group">
+    <ul class="list-group" id="list-presentations">
         {% for pres in site.data.struct.presentations %}
             {% assign pres_slug = pres.title | slugify %}
             <li class="list-group-item text-center">
