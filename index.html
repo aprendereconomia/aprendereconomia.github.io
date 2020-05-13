@@ -8,7 +8,7 @@ title: Aprender Economia
 <div class="container">
     {% for post in site.posts %}
         {%assign post_subject_slug = post.subject | slugify %}
-        <div class="card card-body" id="scroll">
+        <div class="m-3 card card-body" id="scroll">
             <div class="text-center bg-light-blue">
                 <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
                 <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}}

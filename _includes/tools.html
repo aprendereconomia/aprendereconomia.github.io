@@ -6,7 +6,7 @@
     <nav class="justify-content-center align-center navbar navbar-light bg-light">
         <div class="row">
             <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <input aria-label="Search" class="form-control mr-sm-2" id="search-tools" oninput="filter_list(this, 'tools')" placeholder="Filtrar" type="text">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-tools" oninput="filter_list(this, 'tools')" placeholder="Filtrar" type="text"/>
             </div>
             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <span class="oi oi-magnifying-glass"></span>
@@ -44,7 +44,7 @@
             {% elsif tool.link %}
                 <li class="list-group-item text-center">
                     <a class="btn btn-light " href="{{ tool.link }}" target="_blank">{{ tool.title }}
-                        <span class="oi oi-external-link"></span>
+                        <span class="ml-3 oi oi-external-link"></span>
                     </a>
                 </li>
             {% endif %}

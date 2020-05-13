@@ -6,10 +6,10 @@
 <div class="collapse" id="presentations-dropdown">
     <nav class="justify-content-center align-center navbar navbar-light bg-light">
         <div class="row">
-            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <input aria-label="Search" class="form-control mr-sm-2" id="search-presentations" oninput="filter_list(this, 'presentations')" placeholder="Filtrar" type="text">
+            <div class="col col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-presentations" oninput="filter_list(this, 'presentations')" placeholder="Filtrar" type="text"/>
             </div>
-            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <span class="oi oi-magnifying-glass"></span>
             </div>
         </div>
@@ -18,7 +18,7 @@
         {% for pres in site.data.struct.presentations %}
             {% assign pres_slug = pres.title | slugify %}
             <li class="list-group-item text-center">
-                <button class="btn btn-light" data-target="#modal-presentation-{{ pres_slug }}" data-toggle="modal" href="#" type="button">{{ pres.title }}
+                <button class="btn btn-light" data-target="#modal-presentation-{{ pres_slug }}" data-toggle="modal" href="#" type="button">{{ pres.title }}<span class="ml-3 oi oi-file"></span>
                 </button>
             </li>
             <div aria-hidden="true" aria-labelledby="modal-{{ pres_slug }}" class="modal fade presentationModal" id="modal-presentation-{{ pres_slug }}" role="dialog" tabindex="-1">

@@ -6,7 +6,7 @@
     <nav class="justify-content-center align-center navbar navbar-light bg-light">
         <div class="row">
             <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <input aria-label="Search" class="form-control mr-sm-2" id="search-videos" oninput="filter_list(this, 'videos')" placeholder="Filtrar" type="text">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-videos" oninput="filter_list(this, 'videos')" placeholder="Filtrar" type="text"/>
             </div>
             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <span class="oi oi-magnifying-glass"></span>
@@ -17,7 +17,12 @@
         {% for video in site.data.struct.videos %}
             {% assign video_slug = video.title | slugify %}
             <li class="list-group-item text-center">
-                <button class="btn btn-light" data-target="#modal-video-{{ video_slug }}" data-toggle="modal" href="#" type="button">{{ video.title }}</button>
+                <button class="btn btn-light" data-target="#modal-video-{{ video_slug }}" data-toggle="modal" href="#" type="button">{{ video.title }}
+                    {% case video.type %}
+                        {% when "embed" %}
+                            <span class="ml-3 oi oi-media-play"></span>
+                    {% endcase %}
+                </button>
             </li>
             <div aria-hidden="true" aria-labelledby="modal-{{ video_slug }}" class="modal fade videoModal" id="modal-video-{{ video_slug }}" role="dialog" tabindex="-1">
                 <div class="modal-dialog modal-xl modal-lg modal-sm" role="document">
