@@ -3,8 +3,7 @@ layout: default
 ---
 
 <div class="container">
-    <h1>Postagens da categoria
-                                '{{ page.type }}'</h1>
+    <h1>Postagens da categoria '{{ page.type }}'</h1>
     <ul class="posts">
         {% assign type_slug = page.type | slugify %}
         {% for post in site.posts %}
