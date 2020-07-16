@@ -1,0 +1,53 @@
+<a aria-controls="tools-dropdown" aria-expanded="false" class="btn col my-3 btn-primary" data-toggle="collapse" href="#tools-dropdown" role="button">
+    Ferramentas e Softwares
+</a>
+
+<div class="collapse" id="tools-dropdown">
+    <nav class="justify-content-center align-center navbar navbar-light bg-light">
+        <div class="row">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-tools" oninput="filter_list(this, 'tools')" placeholder="Filtrar" type="text"/>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+               <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </nav>
+    <ul class="list-group" id="list-tools">
+        {% for tool in site.data.struct.tools %}
+            {% assign tool_slug = tool.title | slugify %}
+            {% if tool.content %}
+                <li class="list-group-item text-center">
+                    <button class="btn btn-light" data-target="#modal-tool-{{ tool_slug }}" data-toggle="modal" href="#" type="button">{{ tool.title }}
+                    </button>
+                </li>
+                <div aria-hidden="true" aria-labelledby="modal-{{ tool_slug }}" class="modal fade videoModal" id="modal-tool-{{ tool_slug }}" role="dialog" tabindex="-1">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ tool.title }}</h5>
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
+                                    {{ tool.content }}
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% elsif tool.link %}
+                <li class="list-group-item text-center">
+                    <a class="btn btn-light " href="{{ tool.link }}" target="_blank">{{ tool.title }}
+                        <span class="ml-3 oi oi-external-link"></span>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

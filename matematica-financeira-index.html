@@ -1,0 +1,29 @@
+---
+layout: page
+pagination:
+enabled: true
+title: Aprender Economia
+---
+
+<div class="container">
+    {% for post in site.posts %}
+        {%assign post_subject_slug = post.subject | slugify %}
+        <div class="m-3 card card-body" id="scroll">
+            <div class="text-center bg-light-blue">
+                <a class="main-title font-black" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+                <p class="font-light-grey">{{ post.date | date: "%d/%m/%Y"}}
+                    por
+                    {{ post. author }}</p>
+            </div>
+            <div class="usual-text link-box">
+                <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.excerpt }}</a>
+            </div>
+            <p class="mb-2"></p>
+        </div>
+        <hr>
+    {% endfor %}
+    {% include matematica-financeira/videos.html %}
+    {% include matematica-financeira/presentations.html %}
+    {% include matematica-financeira/questions.html %}
+    {% include matematica-financeira/tools.html %}
+</div>

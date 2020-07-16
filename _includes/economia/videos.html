@@ -1,0 +1,49 @@
+<a aria-controls="videos-dropdown" aria-expanded="false" class="btn col my-3 btn-primary" data-toggle="collapse" href="#videos-dropdown" role="button">
+    Aulas em Vídeo
+</a>
+
+<div class="collapse" id="videos-dropdown">
+    <nav class="justify-content-center align-center navbar navbar-light bg-light">
+        <div class="row">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input aria-label="Search" class="form-control mr-sm-2" id="search-videos" oninput="filter_list(this, 'videos')" placeholder="Filtrar" type="text"/>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+               <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </nav>
+    <ul class="list-group" id="list-videos">
+        {% for video in site.data.struct.videos %}
+            {% assign video_slug = video.title | slugify %}
+            <li class="list-group-item text-center">
+                <button class="btn btn-light" data-target="#modal-video-{{ video_slug }}" data-toggle="modal" href="#" type="button">{{ video.title }}
+                    {% case video.type %}
+                        {% when "embed" %}
+                            <i class="ml-3 fas fa-play-circle"></i>
+                    {% endcase %}
+                </button>
+            </li>
+            <div aria-hidden="true" aria-labelledby="modal-{{ video_slug }}" class="modal fade videoModal" id="modal-video-{{ video_slug }}" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-lg modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light justify-content-center">
+                            <h5 class="modal-title" id="exampleModalLabel">{{ video.title }}</h5>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
+                                <iframe class="embed-responsive-item" allow="autoplay" src="{{ video.youtubelink }}" allowscriptaccess="always" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </ul>
+</div>

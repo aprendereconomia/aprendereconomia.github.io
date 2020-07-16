@@ -1,0 +1,28 @@
+{
+  "name": "aprender-economia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aprendereconomia/aprendereconomia.github.io.git"
+  },
+  "author": "José Tobias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aprendereconomia/aprendereconomia.github.io/issues"
+  },
+  "homepage": "https://github.com/aprendereconomia/aprendereconomia.github.io#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@popperjs/core": "^2.4.4",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "less": "^3.12.2",
+    "popper.js": "^1.16.1",
+    "scss": "^0.2.4"
+  }
+}
