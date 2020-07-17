@@ -12,10 +12,4 @@ sass:
 
 # URL config
 permalink: pretty
-
 # defaults config
-defaults:
-  - scope:
-      path: "assets/images"
-    values:
-      image: true
