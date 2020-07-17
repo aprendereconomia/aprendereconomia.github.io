@@ -13,7 +13,7 @@ function filter_list(e, list_id) {
 
     let list = $("#list-" + list_id).children(".list-group-item");
 
-    list.each(function (idx, el) {
+    list.each(function (_idx, el) {
         let text = $(el).text().normalize("NFC").toLowerCase().trim();
 
         if (search_pattern.exec(text)) {

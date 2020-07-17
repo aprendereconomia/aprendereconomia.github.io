@@ -1,0 +1,31 @@
+{% assign slug_title = page.title | slugify %}
+<div class="p-3" id="questions">
+    {% assign k = 0 %}
+    {% for questions in site.data.questions.economia[page.questions] %}
+        <div class="card border-dark p-3 m-3 bg-light">
+            <h6 class="m-3 font-weight-bold">Questão
+                {{ questions.id }}
+                -
+                {{ questions.question }}</h6>
+            {% for options in site.data.options.economia[page.options] %}
+                {% if options.question_id == questions.id %}
+                    <div class="d-flex">
+                        {% if questions.type == "1" %}
+                            <input type="radio" name="Q-{{ questions.id }}-{{ slug_title }}" id="{{ k }}-{{ slug_title }}" value="{{ options.right }}">
+                            <label for="{{ k }}-{{ slug_title }}" class="ml-3">
+                                {{ options.option }}</label>
+                        {% else %}
+                            <input type="checkbox" name="Q-{{ questions.id }}-{{ slug_title }}" id="{{ k }}-{{ slug_title }}" value="{{ options.right }},{{ questions.type }}" itemtype="{{ questions.type }}" onclick="checkLimit(this, '{{ questions.type }}' )">
+                            <label for="{{ k }}-{{ slug_title }}" class="ml-3">{{ options.option }}</label>
+                        {% endif %}
+                    </div>
+                    {% assign k = k | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button class="btn btn-primary my-3 align-center" id="send-answer-{{ slug_title }}" onclick="checkAnswer('{{ site.data.questions[page.questions].size }}', '{{ slug_title }}')" type="button">Enviar
+                                                        Respostas</button>
+    <button class="btn btn-success my-3 align-center" id="reset-answer-{{ slug_title }}" onclick="resetAnswer('{{ site.data.questions[page.questions].size }}', '{{ slug_title }}')" style="display: none;" type="button">Refazer Teste</button>
+    <div id="results-{{ slug_title }}" style="display: none;"></div>
+</div>
