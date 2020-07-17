@@ -17,7 +17,7 @@
         </div>
     </nav>
     <ul class="list-group" id="list-videos">
-        {% for video in site.data.struct.economia.videos %}
+        {% for video in site.data.struct.introducao-a-economia.videos %}
             {% assign video_slug = video.title | slugify %}
             <li class="list-group-item text-center">
                 <button class="btn btn-light" data-target="#modal-video-{{ video_slug }}" data-toggle="modal" href="#" type="button">{{ video.title }}
