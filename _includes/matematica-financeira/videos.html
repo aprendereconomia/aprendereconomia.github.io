@@ -1,5 +1,8 @@
 <a aria-controls="videos-dropdown" aria-expanded="false" class="btn col my-3 btn-primary" data-toggle="collapse" href="#videos-dropdown" role="button">
-    Aulas em Vídeo
+    <div class="d-flex justify-content-center">
+        <span class="ml-auto">Aulas em Vídeo</span>
+        <i class="ml-auto fas fa-caret-square-down"></i>
+    </div>
 </a>
 
 <div class="collapse" id="videos-dropdown">
@@ -35,7 +38,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="embed-responsive embed-responsive-16by9 my-5 align-center">
-                                <iframe class="embed-responsive-item" allow="autoplay" src="{{ video.youtubelink }}" allowscriptaccess="always" allowfullscreen></iframe>
+                                <iframe class="embed-responsive-item" allow="autoplay;encrypted-media" src="{{ video.youtubelink }}" allowscriptaccess="always" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="modal-footer">

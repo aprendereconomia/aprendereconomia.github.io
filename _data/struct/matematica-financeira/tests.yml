@@ -1,0 +1,24 @@
+- {
+    title: "Conceitos Básicos do Bitcoin e Criptomoedas",
+    questions: "conceitos-bitcoin",
+    options: "conceitos-bitcoin",
+    type: "multiple",
+  }
+
+- {
+    title: "Oferta e Demanda - O Chocolate Vai Acabar!",
+    type: "serve",
+    src: "tests/oferta-e-demanda-o-chocolate-vai-acabar.pdf",
+  }
+
+- {
+    title: "Oferta e Demanda - Gráficos",
+    src: "tests/oferta-e-demanda-graficos.pdf",
+    type: "serve",
+  }
+
+- {
+    title: "Produção e Custos",
+    src: "tests/producao-e-custos-tabelas.pdf",
+    type: "serve",
+  }

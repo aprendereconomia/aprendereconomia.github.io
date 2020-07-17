@@ -1,5 +1,8 @@
 <a aria-controls="questions-dropdown" aria-expanded="false" class="btn col my-3 btn-primary" data-toggle="collapse" href="#questions-dropdown" role="button">
-    Listas de Exercícios
+    <div class="d-flex justify-content-center">
+        <span class="ml-auto">Listas de Exercícios</span>
+        <i class="ml-auto fas fa-caret-square-down"></i>
+    </div>
 </a>
 
 <div class="collapse" id="questions-dropdown">
@@ -14,7 +17,7 @@
         </div>
     </nav>
     <ul class="list-group" id="list-questions">
-        {% for test in site.data.struct.tests %}
+        {% for test in site.data.struct.economia.tests %}
             {% assign test_slug = test.title | slugify %}
             <li class="list-group-item text-center">
                 <button class="btn btn-light" data-target="#modal-question-{{ test_slug }}" data-toggle="modal" href="#" type="button">{{ test.title }}
@@ -41,7 +44,7 @@
 
                                 {% when "multiple" %}
                                     {% assign page = test %}
-                                    {% include question-multi.html %}
+                                    {% include economia/question-multi.html %}
 
                                 {% when "serve" %}
                                     <object data="{{site.baseurl}}/{{ test.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
