@@ -17,7 +17,7 @@
         </div>
     </nav>
     <ul class="list-group" id="list-questions">
-        {% for test in site.data.struct.economia.tests %}
+        {% for test in site.data.struct.introducao-a-economia.tests %}
             {% assign test_slug = test.title | slugify %}
             <li class="list-group-item text-center">
                 <button class="btn btn-light" data-target="#modal-question-{{ test_slug }}" data-toggle="modal" href="#" type="button">{{ test.title }}
@@ -44,7 +44,7 @@
 
                                 {% when "multiple" %}
                                     {% assign page = test %}
-                                    {% include economia/question-multi.html %}
+                                    {% include introducao-a-economia/question-multi.html %}
 
                                 {% when "serve" %}
                                     <object data="{{site.baseurl}}/{{ test.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
