@@ -35,8 +35,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <object data="{{site.baseurl}}/{{ pres.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
-                                <a class="btn btn-primary text-white" href="{{ site.baseurl}}/{{ pres.src }}" download="{{ pres.src }}">Baixar apresentação</a>
+                            <object data="{{ site.url }}{{site.baseurl}}/{{ pres.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
+                                <a class="btn btn-primary text-white" href="{{ site.url }}{{ site.baseurl}}/{{ pres.src }}" download="{{ pres.src }}">Baixar apresentação</a>
                             </object>
                         </div>
                         <div class="modal-footer">
