@@ -21,7 +21,7 @@
             {% assign test_slug = test.title | slugify %}
             <li class="list-group-item text-center">
                 <button class="btn btn-light" data-target="#modal-question-{{ test_slug }}" data-toggle="modal" href="#" type="button">{{ test.title }}
-                    {% case test.type%}
+                    {% case test.type %}
                         {% when "multiple" %}
                             <i class="ml-3 fas fa-list"></i>
                         {% when "serve" %}
@@ -41,16 +41,13 @@
                         </div>
                         <div class="modal-body">
                             {% case test.type %}
-
                                 {% when "multiple" %}
                                     {% assign page = test %}
                                     {% include introducao-a-economia/question-multi.html %}
-
                                 {% when "serve" %}
-                                    <object data="{{site.baseurl}}/{{ test.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
-                                        <a class="btn btn-primary text-white" href="{{ site.baseurl}}/{{ test.src }}" download="{{ test.src }}">Baixar apresentação</a>
+                                    <object data="{{ site.url }}{{ site.baseurl }}/{{ test.src }}" height="500" style="height: 85vh;" type="application/pdf" width="100%">
+                                        <a class="btn btn-primary text-white" href="{{ site.url }}{{ site.baseurl}}/{{ test.src }}" download="{{ site.url }}{{ site.baseurl }}/{{ test.src }}">Baixar apresentação</a>
                                     </object>
-
                             {% endcase %}
                         </div>
                         <div class="modal-footer">
