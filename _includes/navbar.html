@@ -16,12 +16,22 @@
 
 <div class="collapse navbar-collapse ml-auto" id="navbarOptions">
     <ul class="navbar-nav ml-auto">
+        {% if page.level != "main" %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria="haspopup="true"" aria-expanded="false">
+                Disciplinas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}/introducao-a-economia-index">Introdução à Economia</a>
+                <a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}/matematica-financeira-index">Matemática Financeira</a>
+            </div>
+        </li>
+        {% endif %}
         <li class="nav-item">
             <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}">
                 Inicio
             </a>
         </li>
-
         <li class="nav-item mx-2">
             <a class="nav-link" href="https://www.youtube.com/channel/UC4zRbcanlK4habf42NriZ6g" target="_blank">YouTube
                 <i class="fas fa-external-link-square-alt"></i>
