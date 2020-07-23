@@ -6,3 +6,4 @@ _site
 /assets/js/node_modules/*/README.md
 /assets/js/node_modules/*/readme.md
 Gemfile.lock
+.jekyll-metadata
